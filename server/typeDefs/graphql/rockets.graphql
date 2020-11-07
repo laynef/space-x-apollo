@@ -77,7 +77,7 @@ type SecondStage {
 }
 
 type RocketType {
-  id: Int
+  id: String
   active: Boolean
   stages: Int
   boosters: Int
