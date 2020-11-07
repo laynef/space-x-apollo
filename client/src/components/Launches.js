@@ -15,7 +15,7 @@ function Launches() {
                     <div className="w-100 d-flex flex-wrap align-items-center justify-content-center">
                         {data.launches.map((launch, key) => (
                             <div className="card text-dark p-2 m-2" key={key}>
-                                <img src={launch.links.patch.small} alt="" />
+                                <img src={launch.links.patch.small || logo} alt="" />
                             </div>
                         ))}
                     </div>
