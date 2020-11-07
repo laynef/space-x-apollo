@@ -100,8 +100,3 @@ type RocketType {
   rocket_name: String
   rocket_type: String
 }
-
-type Query {
-  rocket(rocketId: ID!): RocketType
-  rockets: [RocketType]
-}

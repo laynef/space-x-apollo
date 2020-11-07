@@ -1,0 +1,6 @@
+type Query {
+    launches: [LaunchType]
+    launch(launchId: ID!): LaunchType
+    rocket(rocketId: ID!): RocketType
+    rockets: [RocketType]
+}

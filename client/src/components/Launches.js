@@ -4,19 +4,18 @@ import { useQuery } from "@apollo/react-hooks";
 import logo from "../images/logo.svg";
 
 
-function Rockets() {
-    const gql = loader('../graphql/rockets.graphql');
+function Launches() {
+    const gql = loader('../graphql/launches.graphql');
     const { loading, error, data } = useQuery(gql);
-    console.log(data)
 
     return (
         <div className="App">
             <div className="App-header">
                 {data && (
-                    <div className="w-100 d-flex flex-column align-items-center justify-content-start">
-                        {data.rockets.map((rocket, key) => (
+                    <div className="w-100 d-flex flex-wrap align-items-center justify-content-center">
+                        {data.launches.map((launch, key) => (
                             <div className="card text-dark p-2 m-2" key={key}>
-                                <p>{rocket.id}</p>
+                                <img src={launch.links.patch.small} alt="" />
                             </div>
                         ))}
                     </div>
@@ -38,4 +37,4 @@ function Rockets() {
     )
 }
 
-export default Rockets;
+export default Launches;

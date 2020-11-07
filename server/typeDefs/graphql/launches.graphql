@@ -1,0 +1,81 @@
+type Failure {
+    time: Int
+    altitude: String
+    reason: String
+}
+
+type Fairing {
+    reused: Boolean
+    recovery_attempt: Boolean
+    recovered: Boolean
+    ships: [String]
+}
+
+type Core {
+    core: String
+    flight: Int
+    gridfins: Boolean
+    legs: Boolean
+    reused: Boolean
+    landing_attempt: Boolean
+    landing_success: String
+    landing_type: String
+    landpad: String
+}
+
+type Flickr {
+    small: [String]
+    original: [String]
+}
+
+type Reddit {
+    campaign: String
+    launch: String
+    media: String
+    recovery: String
+}
+
+type Patch {
+    small: String
+    large: String
+}
+
+type LaunchLinks {
+    patch: Patch
+    reddit: Reddit
+    flickr: Flickr
+    presskit: String
+    webcast: String
+    youtube_id: String
+    article: String
+    wikipedia: String
+}
+
+type LaunchType {
+    fairings: Fairing
+    links: LaunchLinks
+    static_fire_date_utc: String
+    static_fire_date_unix: String
+    tbd: Boolean
+    net: Boolean
+    window: Int
+    rocket: String
+    success: Boolean
+    details: String
+    crew: [String]
+    ships: [String]
+    capsules: [String]
+    payloads: [String]
+    launchpad: String
+    auto_update: Boolean
+    failures: [Failure]
+    flight_number: Int
+    name: String
+    date_utc: String
+    date_unix: String
+    date_local: String
+    date_precision: String
+    upcoming: Boolean
+    cores: [Core]
+    id: String
+}

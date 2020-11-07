@@ -1,0 +1,9 @@
+query {
+  launches {
+    links {
+      patch {
+        small
+      }
+    }
+  }
+}

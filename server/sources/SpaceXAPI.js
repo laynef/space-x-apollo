@@ -6,6 +6,14 @@ class SpaceXAPI extends RESTDataSource {
         this.baseURL = 'https://api.spacexdata.com/v4/'
     }
 
+    async getAllLaunches() {
+        return this.get('launches');
+    }
+
+    async getLaunch(launchId) {
+        return this.get(`launches/${launchId}`);
+    }
+
     async getAllRockets() {
         return this.get('rockets');
     }

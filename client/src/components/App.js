@@ -4,7 +4,7 @@ import {
   ApolloClient, 
   InMemoryCache,
 } from '@apollo/client';
-import Rockets from './Rockets';
+import Launches from './Launches';
 
 const client = new ApolloClient({
   uri: 'http://localhost:4000',
@@ -14,7 +14,7 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={client}>
-      <Rockets />
+      <Launches />
     </ApolloProvider>
   );
 }
