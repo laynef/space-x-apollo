@@ -3,15 +3,15 @@ const { RESTDataSource } = require('apollo-datasource-rest');
 class SpaceXAPI extends RESTDataSource {
     constructor() {
         super();
-        this.baseURL = 'https://api.spacexdata.com/v3'
+        this.baseURL = 'https://api.spacexdata.com/v3/'
     }
 
     async getAllRockets() {
-        return this.get('/rockets');
+        return this.get('rockets');
     }
 
     async getRocket(rocketId) {
-        return this.get('/rockets/' + rocketId);
+        return this.get(`rockets/${rocketId}`);
     }
 }
 
