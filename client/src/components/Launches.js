@@ -5,7 +5,7 @@ import logo from "../images/logo.svg";
 
 
 function Launches() {
-    const gql = loader('../graphql/launches.graphql');
+    const gql = loader('../queries/launches.graphql');
     const { loading, error, data } = useQuery(gql);
 
     return (
