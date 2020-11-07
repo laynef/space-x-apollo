@@ -13,10 +13,10 @@ function Rockets() {
         <div className="App">
             <div className="App-header">
                 {data && (
-                    <div className="w-100 d-flex flex-column align-items-center">
+                    <div className="w-100 d-flex flex-column align-items-center justify-content-start">
                         {data.rockets.map((rocket, key) => (
-                            <div key={key}>
-                                
+                            <div className="card text-dark p-2 m-2" key={key}>
+                                <p>{rocket.id}</p>
                             </div>
                         ))}
                     </div>
